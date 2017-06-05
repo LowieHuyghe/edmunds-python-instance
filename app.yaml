@@ -1,0 +1,41 @@
+# Example of app.yaml
+# Used in Google App Engine applications
+
+application: myapp
+version: 0-0-1
+runtime: python27
+api_version: 1
+threadsafe: yes
+
+
+handlers:
+
+- url: /favicon\.ico
+  static_files: public/favicon.ico
+  upload: public/favicon\.ico
+  secure: always
+
+- url: /robots\.txt
+  static_files: public/robots.txt
+  upload: public/robots\.txt
+  secure: always
+
+- url: /assets/(.*\.(htm|html|css|js|png|jpg|jpeg|gif|svg|ico))$
+  static_files: public/assets/\1
+  upload: public/assets/(.*\.(htm|html|css|js|png|jpg|jpeg|gif|svg|ico))$
+  secure: always
+
+- url: /.*
+  script: main.app
+  secure: always
+
+
+skip_files:
+
+  - ^(.*/)?#.*#$
+  - ^(.*/)?.*~$
+  - ^(.*/)?.*\.py[co]$
+  - ^(.*/)?.*/RCS/.*$
+  - ^(.*/)?\.(?!env).*$
+  - ^(.*/)?_ide_helper\.php$
+  - ^(.*/)?\.DS_Store$

@@ -1,0 +1,2 @@
+-e git+git@github.com:LowieHuyghe/edmunds.git#egg=edmunds
+google-api-python-client==1.6.2

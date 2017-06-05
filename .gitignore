@@ -99,3 +99,15 @@ ENV/
 
 # mypy
 .mypy_cache/
+
+# OS X
+.DS_Store
+
+# IDEs
+*.sublime-*
+.idea/
+
+# GitBook
+_book/
+docs/_book/
+node_modules/
