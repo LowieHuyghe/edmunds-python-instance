@@ -1,6 +1,7 @@
 
 # Edmunds Instance
 
+[![CircleCI](https://circleci.com/gh/LowieHuyghe/edmunds-instance.svg?style=svg)](https://circleci.com/gh/LowieHuyghe/edmunds-instance)
 [![Code Health](https://landscape.io/github/LowieHuyghe/edmunds-instance/master/landscape.svg?style=flat)](https://landscape.io/github/LowieHuyghe/edmunds-instance/master)
 [![Code Climate](https://codeclimate.com/github/LowieHuyghe/edmunds-instance/badges/gpa.svg)](https://codeclimate.com/github/LowieHuyghe/edmunds-instance)
 [![Updates](https://pyup.io/repos/github/LowieHuyghe/edmunds-instance/shield.svg)](https://pyup.io/repos/github/LowieHuyghe/edmunds-instance/)
