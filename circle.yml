@@ -13,7 +13,6 @@ machine:
 dependencies:
   cache_directories:
     - /opt/google-cloud-sdk
-    - /opt/circleci/nodejs/v4.2.6/lib/node_modules
 
   override:
     - ~/virtualenvs/venv-2.7/bin/pip install -r requirements.txt
@@ -21,17 +20,17 @@ dependencies:
     - ~/virtualenvs/venv-3.5/bin/pip install -r requirements.txt
     - ~/virtualenvs/venv-3.6/bin/pip install -r requirements.txt
 
-    - pip install codecov
+#    - pip install codecov
 
     - sudo /opt/google-cloud-sdk/bin/gcloud --quiet components update
     - sudo /opt/google-cloud-sdk/bin/gcloud --quiet components install app-engine-python
 
 test:
   override:
-    - ~/virtualenvs/venv-2.7/bin/coverage run --source=edmunds setup.py test
-    - ~/virtualenvs/venv-3.4/bin/coverage run --append --source=edmunds setup.py test
-    - ~/virtualenvs/venv-3.5/bin/coverage run --append --source=edmunds setup.py test
-    - ~/virtualenvs/venv-3.6/bin/coverage run --append --source=edmunds setup.py test
+    - ~/virtualenvs/venv-2.7/bin/coverage run --source=app setup.py test
+    - ~/virtualenvs/venv-3.4/bin/coverage run --append --source=app setup.py test
+    - ~/virtualenvs/venv-3.5/bin/coverage run --append --source=app setup.py test
+    - ~/virtualenvs/venv-3.6/bin/coverage run --append --source=app setup.py test
 
 #  post:
 #    - codecov
