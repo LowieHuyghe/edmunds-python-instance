@@ -13,4 +13,4 @@ class HelloWorldCommand(Command):
         :return:    void
         """
 
-        print 'Hello World!'
+        print('Hello World!')
