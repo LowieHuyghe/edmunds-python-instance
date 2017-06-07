@@ -1,7 +1,8 @@
 
 from edmunds.console.manager import Manager as EdmundsManager
-from app.console.commands.helloworldcommand import HelloWorldCommand
 from edmunds.foundation.testing.testcommand import TestCommand
+from edmunds.foundation.database.migratecommand import MigrateCommand
+from app.console.commands.helloworldcommand import HelloWorldCommand
 
 
 class Manager(EdmundsManager):
@@ -18,4 +19,6 @@ class Manager(EdmundsManager):
         super(Manager, self).add_default_commands()
 
         self.add_command('test', TestCommand())
+        self.add_command('db', MigrateCommand(self.app))
+
         self.add_command('helloworld', HelloWorldCommand())
