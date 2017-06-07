@@ -27,10 +27,10 @@ dependencies:
 
 test:
   override:
-    - ~/virtualenvs/venv-2.7/bin/coverage run --source=app setup.py test
-    - ~/virtualenvs/venv-3.4/bin/coverage run --append --source=app setup.py test
-    - ~/virtualenvs/venv-3.5/bin/coverage run --append --source=app setup.py test
-    - ~/virtualenvs/venv-3.6/bin/coverage run --append --source=app setup.py test
+    - ~/virtualenvs/venv-2.7/bin/coverage run --source=app manage.py test
+    - ~/virtualenvs/venv-3.4/bin/coverage run --append --source=app manage.py test
+    - ~/virtualenvs/venv-3.5/bin/coverage run --append --source=app manage.py test
+    - ~/virtualenvs/venv-3.6/bin/coverage run --append --source=app manage.py test
 
 #  post:
 #    - codecov
