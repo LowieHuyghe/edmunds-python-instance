@@ -58,15 +58,45 @@ APP = {
 
 
     # ------------------------------------------------------------
+    # Localization
+    # ------------------------------------------------------------
+    #
+    # Localization is configured here.
+    # Drivers:
+    # from edmunds.localization.location.drivers.googleappengine import GoogleAppEngine
+    # from edmunds.localization.location.drivers.maxmindcitydatabase import MaxMindCityDatabase
+    # from edmunds.localization.location.drivers.maxmindenterprisedatabase import MaxMindEnterpriseDatabase
+    # from edmunds.localization.location.drivers.maxmindwebservice import MaxMindWebService
+    #
+
+    'localization': {
+        'enabled': False,
+
+        'locale': {
+            'fallback': 'en_US',
+            'supported': ['en_US', 'en', 'nl_BE', 'nl'],
+        },
+
+        'location': {
+            'enabled': False,
+            'instances': [
+                #
+            ],
+        },
+    },
+
+
+
+    # ------------------------------------------------------------
     # Logging
     # ------------------------------------------------------------
     #
     # Logging is configured here.
     # Drivers:
-    # from Edmunds.Log.Drivers.File import File
-    # from Edmunds.Log.Drivers.Stream import Stream
-    # from Edmunds.Log.Drivers.SysLog import SysLog
-    # from Edmunds.Log.Drivers.TimedFile import TimedFile
+    # from edmunds.log.drivers.file import File
+    # from edmunds.log.drivers.stream import Stream
+    # from edmunds.log.drivers.syslog import SysLog
+    # from edmunds.log.drivers.timedfile import TimedFile
     #
 
     'log':
@@ -90,9 +120,9 @@ APP = {
     # Profiling is configured here. This can be moved to
     # .env.local for example if that is more convenient.
     # Drivers:
-    # from Edmunds.Profiler.Drivers.CallGraph import CallGraph
-    # from Edmunds.Profiler.Drivers.Stream import Stream
-    # from Edmunds.Profiler.Drivers.BlackfireIo import BlackfireIo
+    # from edmunds.profiler.drivers.callgraph import CallGraph
+    # from edmunds.profiler.drivers.stream import Stream
+    # from edmunds.profiler.drivers.blackfireio import BlackfireIo
     #
 
     'profiler':
