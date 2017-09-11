@@ -62,11 +62,15 @@ APP = {
     # ------------------------------------------------------------
     #
     # Localization is configured here.
-    # Drivers:
+    #
+    # Location Drivers:
     # from edmunds.localization.location.drivers.googleappengine import GoogleAppEngine
     # from edmunds.localization.location.drivers.maxmindcitydatabase import MaxMindCityDatabase
     # from edmunds.localization.location.drivers.maxmindenterprisedatabase import MaxMindEnterpriseDatabase
     # from edmunds.localization.location.drivers.maxmindwebservice import MaxMindWebService
+    #
+    # Translations Drivers:
+    # from edmunds.localization.translations.drivers.configtranslator import ConfigTranslator
     #
 
     'localization': {
@@ -78,6 +82,13 @@ APP = {
         },
 
         'location': {
+            'enabled': False,
+            'instances': [
+                #
+            ],
+        },
+
+        'translations': {
             'enabled': False,
             'instances': [
                 #
