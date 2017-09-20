@@ -58,6 +58,52 @@ APP = {
 
 
     # ------------------------------------------------------------
+    # Database
+    # ------------------------------------------------------------
+    #
+    # Database is configured here.
+    #
+    # Database Drivers:
+    # from edmunds.database.drivers.mysql import MySql
+    # from edmunds.database.drivers.postgresql import PostgreSql
+    # from edmunds.database.drivers.sqlite import Sqlite
+    #
+
+    'database':
+    {
+        'enabled': False,
+        'instances':
+        [
+            #
+        ],
+    },
+
+
+
+    # ------------------------------------------------------------
+    # Caching
+    # ------------------------------------------------------------
+    #
+    # Caching is configured here.
+    #
+    # Cache Drivers:
+    # from edmunds.cache.drivers.file import File
+    # from edmunds.cache.drivers.memcached import Memcached
+    # from edmunds.cache.drivers.redis import Redis
+    #
+
+    'cache':
+    {
+        'enabled': False,
+        'instances':
+        [
+            #
+        ],
+    },
+
+
+
+    # ------------------------------------------------------------
     # Localization
     # ------------------------------------------------------------
     #
@@ -73,24 +119,30 @@ APP = {
     # from edmunds.localization.translations.drivers.configtranslator import ConfigTranslator
     #
 
-    'localization': {
+    'localization':
+    {
         'enabled': False,
 
-        'locale': {
+        'locale':
+        {
             'fallback': 'en_US',
             'supported': ['en_US', 'en', 'nl_BE', 'nl'],
         },
 
-        'location': {
+        'location':
+        {
             'enabled': False,
-            'instances': [
+            'instances':
+            [
                 #
             ],
         },
 
-        'translations': {
+        'translations':
+        {
             'enabled': False,
-            'instances': [
+            'instances':
+            [
                 #
             ],
         },
