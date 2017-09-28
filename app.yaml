@@ -1,8 +1,6 @@
 # Example of app.yaml
 # Used in Google App Engine applications
 
-application: myapp
-version: 0-0-1
 runtime: python27
 api_version: 1
 threadsafe: yes
