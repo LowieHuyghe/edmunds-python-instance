@@ -1,12 +1,12 @@
 
-from edmunds.foundation.testing.testcase import TestCase as EdmundsTestCase
+from edmunds.gae.gaetestcase import GaeTestCase as EdmundsGaeTestCase
 from bootstrap.myapp import bootstrap
 import os
 
 
-class TestCase(EdmundsTestCase):
+class GaeTestCase(EdmundsGaeTestCase):
     """
-    A UnitTest Test Case
+    A UnitTest Gae Test Case
     """
 
     def create_application(self, environment='testing'):
