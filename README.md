@@ -11,6 +11,6 @@ Edmunds Instance is an instance to kickstart your web application
 using [Edmunds](https://github.com/LowieHuyghe/edmunds).
 
 
-## Documentation
+## Getting Started
 
-See: [https://lowiehuyghe.github.io/edmunds/](https://lowiehuyghe.github.io/edmunds/)
+Check out the documentation on how to get started: [https://lowiehuyghe.github.io/edmunds/](https://lowiehuyghe.github.io/edmunds/) 
