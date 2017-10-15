@@ -2,6 +2,6 @@ site_name: Edmunds Instance
 
 pages:
 
-  - Home: index.md
+  - Introduction: index.md
 
 theme: readthedocs
