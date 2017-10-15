@@ -113,19 +113,50 @@ jobs:
             git config --global user.email "sayhi@circleci.com"
             mkdocs gh-deploy --dirty
 
+  deploy-me:
+    docker:
+      - image: python:3.6
+    steps:
+      - checkout
+      - run: echo "Preparing deploy"
+      - deploy: echo "Deploying"
+
 
 workflows:
   version: 2
 
   flow:
     jobs:
-      - test-2.7
-      - test-3.4
-      - test-3.5
-      - test-3.6
+      - test-2.7:
+          filters:
+            tags:
+              only: /v[0-9]+(\.[0-9]+)*/
+      - test-3.4:
+          filters:
+            tags:
+              only: /v[0-9]+(\.[0-9]+)*/
+      - test-3.5:
+          filters:
+            tags:
+              only: /v[0-9]+(\.[0-9]+)*/
+      - test-3.6:
+          filters:
+            tags:
+              only: /v[0-9]+(\.[0-9]+)*/
       - update-docs:
+          filters:
+            tags:
+              only: /v[0-9]+(\.[0-9]+)*/
           requires:
             - test-2.7
             - test-3.4
             - test-3.5
             - test-3.6
+      - deploy:
+          filters:
+            tags:
+              only: /v[0-9]+(\.[0-9]+)*/
+            branches:
+              ignore: /.*/
+          requires:
+            - deploy-me
