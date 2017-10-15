@@ -1,0 +1,7 @@
+site_name: Edmunds Instance
+
+pages:
+
+  - Home: index.md
+
+theme: readthedocs
