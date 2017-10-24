@@ -4,6 +4,8 @@ from app.database.models.user import User
 from app.database.models.role import Role
 
 
+SECURITY_PASSWORD_HASH = 'sha512_crypt'
+SECURITY_PASSWORD_SALT = 'my very long salt'
 APP = {
 
     # ------------------------------------------------------------

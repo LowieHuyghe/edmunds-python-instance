@@ -3,10 +3,10 @@ from edmunds.database.model import relationship, backref
 from edmunds.auth.models.usermixin import UserMixin
 from app.database.models.role import Role
 from app.database.models.userroles import UserRolesTable
-from edmunds.database.model import Model
+from edmunds.database.model import db
 
 
-class User(Model, UserMixin):
+class User(db.Model, UserMixin):
     """
     User Model
     """

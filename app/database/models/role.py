@@ -1,9 +1,9 @@
 
 from edmunds.auth.models.rolemixin import RoleMixin
-from edmunds.database.model import Model
+from edmunds.database.model import db
 
 
-class Role(Model, RoleMixin):
+class Role(db.Model, RoleMixin):
     """
     Role Model
     """

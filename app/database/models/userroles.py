@@ -1,11 +1,11 @@
 
-from edmunds.auth.models.userrolesmixin import UserRolesMixin
-from edmunds.database.model import Table
+from edmunds.database.model import db
 
 
-UserRolesTable = Table(
+UserRolesTable = db.Table(
     'user_roles',
-    *UserRolesMixin,
+    db.Column('user_id', db.Integer, db.ForeignKey('user.id')),
+    db.Column('role_id', db.Integer, db.ForeignKey('role.id')),
 
     #  info={'bind_key': 'users_database'},
 )
