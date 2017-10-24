@@ -1,10 +1,12 @@
 
-from edmunds.auth.models.role import Role as EdmundsRole
+from edmunds.auth.models.rolemixin import RoleMixin
+from edmunds.database.model import Model
 
 
-class Role(EdmundsRole):
+class Role(Model, RoleMixin):
     """
     Role Model
     """
 
-    pass
+    # __tablename__ = 'role'
+    # __bind_key__ = 'users'
