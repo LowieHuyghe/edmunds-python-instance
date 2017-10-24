@@ -1,5 +1,11 @@
 
-from edmunds.auth.models.userroles import UserRolesTable as EdmundsUserRolesTable
+from edmunds.auth.models.userrolesmixin import UserRolesMixin
+from edmunds.database.model import Table
 
 
-UserRolesTable = EdmundsUserRolesTable
+UserRolesTable = Table(
+    'user_roles',
+    *UserRolesMixin,
+
+    #  info={'bind_key': 'users_database'},
+)
