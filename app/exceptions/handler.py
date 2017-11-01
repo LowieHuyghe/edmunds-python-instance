@@ -14,7 +14,9 @@ class Handler(EdmundsHandler):
         :type  exception:   Exception
         """
 
-        super(Handler, self).report(exception)
+        if super(Handler, self).report(exception):
+            # Additional reporting
+            pass
 
     def render(self, exception):
         """
