@@ -1,7 +1,5 @@
 
 from app.exceptions.handler import Handler as ExceptionHandler
-from app.database.models.user import User
-from app.database.models.role import Role
 
 
 APP = {
@@ -28,24 +26,6 @@ APP = {
     'exceptions':
     {
         'handler': ExceptionHandler,
-    },
-
-
-
-    # ------------------------------------------------------------
-    # Authentication
-    # ------------------------------------------------------------
-    #
-    # Authentication is configured here.
-    #
-
-    'auth':
-    {
-        'enabled': False,
-        'models': {
-            'user': User,
-            'role': Role,
-        },
     },
 
 }

@@ -1,27 +1,12 @@
 
-from edmunds.database.model import mapper
-from edmunds.auth.tables.roletable import RoleTable
-from edmunds.auth.models.role import Role as EdmundsRole
+from edmunds.auth.models.rolemixin import RoleMixin
+from edmunds.database.model import db
 
 
-class Role(EdmundsRole):
+class Role(db.Model, RoleMixin):
     """
     Role Model
     """
-    __table__ = RoleTable
 
-    def __init__(self, id, name=None, description=None):
-        """
-        Constructor
-        :param id:          The id
-        :param name:        The name
-        :param description: The description
-        """
-        super(Role, self).__init__(
-            id,
-            name=name,
-            description=description
-        )
-
-
-mapper(Role, RoleTable)
+    # __tablename__ = 'role'
+    # __bind_key__ = 'users'
