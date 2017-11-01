@@ -8,21 +8,6 @@ threadsafe: yes
 
 handlers:
 
-- url: /favicon\.ico
-  static_files: public/favicon.ico
-  upload: public/favicon\.ico
-  secure: always
-
-- url: /robots\.txt
-  static_files: public/robots.txt
-  upload: public/robots\.txt
-  secure: always
-
-- url: /assets/(.*\.(htm|html|css|js|png|jpg|jpeg|gif|svg|ico))$
-  static_files: public/assets/\1
-  upload: public/assets/(.*\.(htm|html|css|js|png|jpg|jpeg|gif|svg|ico))$
-  secure: always
-
 - url: /.*
   script: main.app
   secure: always
