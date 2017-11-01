@@ -8,6 +8,6 @@ SECURITY_PASSWORD_SALT = 'my very long salt used only for HMAC encryption'
 
 APP = {
 
-    'env': 'local',
+    'env': 'development',
 
 }
