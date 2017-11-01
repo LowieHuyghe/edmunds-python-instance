@@ -9,4 +9,5 @@ def route(app):
     :rtype: None
     """
 
-    app.route('/', middleware=[MyRequestMiddleware], uses=(HomeController, 'get_index'))
+    app.route('/', uses=(HomeController, 'get_index')) \
+        .middleware(MyRequestMiddleware)
