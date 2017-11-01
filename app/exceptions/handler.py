@@ -7,6 +7,8 @@ class Handler(EdmundsHandler):
     Exception handler
     """
 
+    dont_report = []
+
     def report(self, exception):
         """
         Report the exception
