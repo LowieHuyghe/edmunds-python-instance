@@ -7,10 +7,10 @@
 [![codecov](https://codecov.io/gh/LowieHuyghe/edmunds-instance/branch/master/graph/badge.svg)](https://codecov.io/gh/LowieHuyghe/edmunds-instance)
 [![Updates](https://pyup.io/repos/github/LowieHuyghe/edmunds-instance/shield.svg)](https://pyup.io/repos/github/LowieHuyghe/edmunds-instance/)
 
-Edmunds Instance is an instance to kickstart your web application
+Edmunds Instance is an instance to kick-start your web application
 using [Edmunds](https://github.com/LowieHuyghe/edmunds).
 
 
-## Getting Started
+## Let's get started!
 
-Check out the documentation on how to get started: [https://lowiehuyghe.github.io/edmunds/](https://lowiehuyghe.github.io/edmunds/) 
+Go to: [https://lowiehuyghe.github.io/edmunds/gettingstarted/afreshstart](https://lowiehuyghe.github.io/edmunds/gettingstarted/afreshstart)
