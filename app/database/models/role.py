@@ -1,6 +1,6 @@
 
 from edmunds.auth.models.rolemixin import RoleMixin
-from edmunds.database.model import db
+from edmunds.database.db import db
 
 
 class Role(db.Model, RoleMixin):

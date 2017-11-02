@@ -6,7 +6,7 @@ APP = {
     # ------------------------------------------------------------
     #
     # Profiling is configured here. This can be moved to
-    # .env.local for example if that is more convenient.
+    # .env.development.py for example if that is more convenient.
     # Drivers:
     # from edmunds.profiler.drivers.callgraph import CallGraph
     # from edmunds.profiler.drivers.stream import Stream

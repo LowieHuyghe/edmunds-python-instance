@@ -1,6 +1,0 @@
-
-APP = {
-
-    'debug': False,
-
-}
