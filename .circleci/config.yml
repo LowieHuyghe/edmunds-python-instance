@@ -5,6 +5,8 @@ jobs:
   test-2.7:
     docker:
       - image: lowieh/docker-python-gcp:2.7
+    environment:
+      - APP_ENV: "testing"
     steps:
       - checkout
 #     Test edmunds in python 2.7
@@ -28,6 +30,8 @@ jobs:
   test-3.4:
     docker:
       - image: lowieh/docker-python-gcp:3.4
+    environment:
+      - APP_ENV: "testing"
     steps:
       - checkout
 #     Test edmunds in python 3.4
@@ -51,6 +55,8 @@ jobs:
   test-3.5:
     docker:
       - image: lowieh/docker-python-gcp:3.5
+    environment:
+      - APP_ENV: "testing"
     steps:
       - checkout
 #     Test edmunds in python 3.5
@@ -74,6 +80,8 @@ jobs:
   test-3.6:
     docker:
       - image: lowieh/docker-python-gcp:3.6
+    environment:
+      - APP_ENV: "testing"
     steps:
       - checkout
 #     Test edmunds in python 3.6
