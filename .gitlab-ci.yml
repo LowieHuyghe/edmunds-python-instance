@@ -1,0 +1,105 @@
+stages:
+  - test
+  - docs
+  - deploy
+
+
+test-2.7:
+  stage: test
+  image: lowieh/docker-python-gcp:2.7
+  variables:
+    APP_ENV: testing
+  before_script:
+    - python -m virtualenv venv
+    - . venv/bin/activate
+    - pip install codecov setuptools_scm
+    - pip install -r requirements.txt
+  script:
+    - . venv/bin/activate
+    - coverage run --source=app manage.py test
+  cache:
+    key: deps-test-2.7-$CI_BUILD_REF_NAME
+    paths:
+      - venv
+
+test-3.4:
+  stage: test
+  image: lowieh/docker-python-gcp:3.4
+  variables:
+    APP_ENV: testing
+  before_script:
+    - python -m venv venv
+    - . venv/bin/activate
+    - pip install codecov setuptools_scm
+    - pip install -r requirements.txt
+  script:
+    - . venv/bin/activate
+    - coverage run --source=app manage.py test
+  cache:
+    key: deps-test-3.4-$CI_BUILD_REF_NAME
+    paths:
+      - venv
+
+test-3.5:
+  stage: test
+  image: lowieh/docker-python-gcp:3.5
+  variables:
+    APP_ENV: testing
+  before_script:
+    - python -m venv venv
+    - . venv/bin/activate
+    - pip install codecov setuptools_scm
+    - pip install -r requirements.txt
+  script:
+    - . venv/bin/activate
+    - coverage run --source=app manage.py test
+  cache:
+    key: deps-test-3.5-$CI_BUILD_REF_NAME
+    paths:
+      - venv
+
+test-3.6:
+  stage: test
+  image: lowieh/docker-python-gcp:3.6
+  variables:
+    APP_ENV: testing
+  before_script:
+    - python -m venv venv
+    - . venv/bin/activate
+    # Update setuptools to avoid this issue: https://github.com/linsomniac/python-memcached/issues/103
+    - pip install -U setuptools
+    - pip install codecov setuptools_scm
+    - pip install -r requirements.txt
+  script:
+    - . venv/bin/activate
+    - coverage run --source=app manage.py test
+  cache:
+    key: deps-test-3.6-$CI_BUILD_REF_NAME
+    paths:
+      - venv
+
+
+pages:
+  stage: docs
+  image: python:3.6
+  only:
+    - master
+    - /^v[0-9]+(\.[0-9]+)*$/
+  before_script:
+    - pip install mkdocs mkdocs-material
+  script:
+    - mkdocs build --clean --site-dir public
+  artifacts:
+    paths:
+      - public
+
+
+deploy-me:
+  stage: deploy
+  image: python:3.6
+  only:
+    - /^v[0-9]+(\.[0-9]+)*$/
+  before_script:
+    - echo "Preparing deploy"
+  script:
+    - echo "Deploying"

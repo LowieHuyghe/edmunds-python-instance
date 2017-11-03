@@ -115,3 +115,6 @@ node_modules/
 # .env files
 .env*.py
 !.env*.example.py
+
+# MkDocs
+site
