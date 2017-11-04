@@ -13,17 +13,16 @@ handlers:
   secure: always
 
 
-libraries:
+basic_scaling:
+  max_instances: 1
 
+libraries:
 - name: numpy
   version: "1.6.1"
-
 - name: ssl
   version: latest
 
-
 skip_files:
-
   - ^(.*/)?#.*#$
   - ^(.*/)?.*~$
   - ^(.*/)?.*\.py[co]$
