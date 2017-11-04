@@ -13,6 +13,15 @@ handlers:
   secure: always
 
 
+libraries:
+
+- name: numpy
+  version: "1.6.1"
+
+- name: ssl
+  version: latest
+
+
 skip_files:
 
   - ^(.*/)?#.*#$
