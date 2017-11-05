@@ -1,5 +1,5 @@
 
-from edmunds.gae.gaetestcase import GaeTestCase as EdmundsGaeTestCase
+from edmunds.gae.gaetestcase import GaeTestCase as EdmundsGaeTestCase, gae_can_run
 from bootstrap.myapp import bootstrap
 import os
 

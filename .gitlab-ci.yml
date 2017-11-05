@@ -12,7 +12,7 @@ test-2.7:
   before_script:
     - python -m virtualenv venv
     - . venv/bin/activate
-    - pip install codecov setuptools_scm
+    - pip install codecov coverage setuptools_scm
     - pip install -r requirements.txt
   script:
     - . venv/bin/activate
@@ -30,7 +30,7 @@ test-3.4:
   before_script:
     - python -m venv venv
     - . venv/bin/activate
-    - pip install codecov setuptools_scm
+    - pip install codecov coverage setuptools_scm
     - pip install -r requirements.txt
   script:
     - . venv/bin/activate
@@ -48,7 +48,7 @@ test-3.5:
   before_script:
     - python -m venv venv
     - . venv/bin/activate
-    - pip install codecov setuptools_scm
+    - pip install codecov coverage setuptools_scm
     - pip install -r requirements.txt
   script:
     - . venv/bin/activate
@@ -68,7 +68,7 @@ test-3.6:
     - . venv/bin/activate
     # Update setuptools to avoid this issue: https://github.com/linsomniac/python-memcached/issues/103
     - pip install -U setuptools
-    - pip install codecov setuptools_scm
+    - pip install codecov coverage setuptools_scm
     - pip install -r requirements.txt
   script:
     - . venv/bin/activate
