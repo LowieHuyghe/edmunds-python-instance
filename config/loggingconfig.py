@@ -1,7 +1,9 @@
 
 from edmunds.gae.runtimeenvironment import RuntimeEnvironment as GaeRuntimeEnvironment
-from edmunds.log.drivers.googleappengine import GoogleAppEngine
-from edmunds.log.drivers.file import File
+if GaeRuntimeEnvironment.is_gae():
+    from edmunds.log.drivers.googleappengine import GoogleAppEngine as DynamicDriver
+else:
+    from edmunds.log.drivers.file import File as DynamicDriver
 
 
 APP = {
@@ -25,7 +27,7 @@ APP = {
         [
             {
                 'name': 'dynamic',
-                'driver': File if not GaeRuntimeEnvironment.is_gae() else GoogleAppEngine,
+                'driver': DynamicDriver,
             },
         ],
     },

@@ -1,7 +1,10 @@
 
 from edmunds.gae.runtimeenvironment import RuntimeEnvironment as GaeRuntimeEnvironment
-from edmunds.storage.drivers.googlecloudstorage import GoogleCloudStorage
 from edmunds.storage.drivers.file import File
+if GaeRuntimeEnvironment.is_gae():
+    from edmunds.storage.drivers.googlecloudstorage import GoogleCloudStorage as DynamicDriver
+else:
+    from edmunds.storage.drivers.file import File as DynamicDriver
 
 
 APP = {
@@ -19,7 +22,7 @@ APP = {
         [
             {
                 'name': 'dynamic',
-                'driver': File if not GaeRuntimeEnvironment.is_gae() else GoogleCloudStorage,
+                'driver': DynamicDriver,
             },
             {
                 'name': 'local',
