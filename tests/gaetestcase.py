@@ -14,7 +14,8 @@ class GaeTestCase(EdmundsGaeTestCase):
         Create the application for testing
         :param environment: Environment
         :type environment:  str
-        :return:            edmunds.application.Application
+        :return:            Application
+        :rtype:             edmunds.application.Application
         """
 
         os.environ['APP_ENV'] = environment

@@ -1,9 +1,7 @@
 
 from edmunds.gae.runtimeenvironment import RuntimeEnvironment as GaeRuntimeEnvironment
-if GaeRuntimeEnvironment().is_gae():
-    from edmunds.log.drivers.googleappengine import GoogleAppEngine as LogDriver
-else:
-    from edmunds.log.drivers.file import File as LogDriver
+from edmunds.log.drivers.googleappengine import GoogleAppEngine
+from edmunds.log.drivers.file import File
 
 
 APP = {
@@ -26,8 +24,8 @@ APP = {
         'instances':
         [
             {
-                'name': 'file',
-                'driver': LogDriver,
+                'name': 'dynamic',
+                'driver': File if not GaeRuntimeEnvironment.is_gae() else GoogleAppEngine,
             },
         ],
     },
