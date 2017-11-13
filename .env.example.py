@@ -6,8 +6,9 @@ SECRET_KEY = 'my very long secret key'
 # See https://stackoverflow.com/a/27596919/1846292.
 SECURITY_PASSWORD_SALT = 'my very long salt used only for HMAC encryption'
 
+APP_ENV = 'development'
 APP = {
 
-    'env': 'development',
+    #
 
 }
