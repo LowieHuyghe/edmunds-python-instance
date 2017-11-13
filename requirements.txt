@@ -1,2 +1,2 @@
-edmunds-framework==0.4.1
+edmunds-framework==0.4.2
 google-api-python-client==1.6.4
