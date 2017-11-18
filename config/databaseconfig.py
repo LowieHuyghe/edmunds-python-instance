@@ -20,6 +20,10 @@ APP = {
         [
             #
         ],
+        'modelsandtables':
+        [
+            #
+        ],
     },
 
 }

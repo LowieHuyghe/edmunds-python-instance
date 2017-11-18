@@ -2,6 +2,7 @@
 from edmunds.application import Application
 from app.providers.myserviceprovider import MyServiceProvider
 from app.foundation.myapplicationmiddleware import MyApplicationMiddleware
+from edmunds.database.providers.migrateserviceprovider import MigrateServiceProvider
 from app.http import routes
 
 
@@ -24,6 +25,7 @@ def bootstrap():
 
     # Service Providers
     app.register(MyServiceProvider)
+    # app.register(MigrateServiceProvider)
 
     # Routes
     routes.route(app)
