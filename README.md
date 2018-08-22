@@ -1,5 +1,5 @@
 
-# [DEPRECATED] Edmunds Instance
+# Edmunds Instance
 
 [![CircleCI](https://img.shields.io/circleci/project/github/LowieHuyghe/edmunds-instance/master.svg)](https://circleci.com/gh/LowieHuyghe/edmunds-instance)
 [![Code Health](https://landscape.io/github/LowieHuyghe/edmunds-instance/master/landscape.svg?style=flat)](https://landscape.io/github/LowieHuyghe/edmunds-instance/master)
